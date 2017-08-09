@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> - Acerca de Mi - Sonido de Pipocas</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos2.css">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/sp.ico">
+
+</head>
+
+<body>
+
+	<script language="JavaScript">
+		var txt=document.title;
+		var espera=200;
+		var refresco=null;
+		function rotulo_title() {
+			document.title=txt;
+			txt=txt.substring(1,txt.length)+txt.charAt(0);
+			refresco=setTimeout("rotulo_title()",espera);
+		}
+		rotulo_title();
+	</script>
+
+	<header>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+						<span class="sr-only">Desplegar / Ocultar</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand"> Sonido de Pipocas </a>
+				</div>
+
+				<!-- Inicia Menu -->
+				<div class="collapse navbar-collapse" id="navegacion-fm">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Inicio</a></li>
+						<li class="active"><a href="acercademi.html">Acerca de mi</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+								Tutoriales <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Redes</a></li>
+								<li><a href="#">Linux</a></li>
+								<li><a href="#">Windows</a></li>
+								<li><a href="#">Hacking</a></li>
+								<li><a href="#">Programacion</a></li>
+							</ul>
+						</li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="enlaces.html">Enlaces</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
+					</ul>
+
+					<!--<form action="#" class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Buscar"/>
+						</div>
+						<button type="submit" class="btn btn-primary">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>
+					</form>-->
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<br>
+	<section class="main container">
+		<div class="row">
+			<section class="posts col-md-12">
+				<article class="post clearfix">
+					<a href="#" class="thumb pull-left">
+						<img class="img-thumbnail" src="img/io.jpg" alt="">
+					</a>
+					
+					<h3 class="post-title">
+						Israel Rubén Trigo Fernández
+					</h3>
+					<p class="acerca-de-mi"><span class="post-fecha">Año 2017</span> por <span class="post-autor"><a href="#"> Israel Trigo</a></span></p>
+					<p class="post-contenido text-justify yo">
+						Hola! Soy Israel y me alegra que hayas "dado" con mi espacio de conocimiento :), estoy en camino de especialización en Redes, cuento con certificaciones CCNA y CEH y próximamente eJPT; descubrí que el mundo no funcionaría de la misma forma sin Linux y por tal motivo me dedico a trabajar sobre Debian.<br>
+
+						Actualmente soy consultor en Seguridad Informática y voy desempeñandome en temas de intrusion a sistemas web y sobre dispositivos Android, creo contar con skills en programación ya que fué necesario programar herramientas para realizar pentesting y como camino natural realicé un par de aplicaciones Android (espero subir al play store por estos días).<br>
+
+						Considero que mucha de la información debe ser libre, creo fervientemente que el software sin licencias y de codigo abierto es y será el primer camino a recorrer para crear una comunidad o cultura del <strong><i>TODO PARA TODOS</i></strong> pero siendo realistas hay y habrá muchas cosas que no podrán ser superadas por usuarios GUI de Windows.<br>
+
+						Por último y no menos importante entre mis principios esta disfrutar de los placeres de la vida (<s>pareja</s>, viajes, amigos, comida, rones, juegos, mascotas...) y dedicar mi tiempo libre no solo a mi profesion, sino a una pasión oculta que es la fotografía y bellas artes.<br>
+
+						<a href="./pdfs/CV-IsraelTrigo.pdf" download="CV-IsraelTrigo" id="yo">
+							Descarga mi curriculum
+						</a>
+					</p>
+
+					<div class="contenedor-botones">
+						<a href="#" class="btn btn-success"> Comentarios <span class="badge">20</span></a>
+					</div>
+				</article>				
+			</section>		
+		</div>
+	</section>
+
+	<footer>
+		<div class="container-fluid pie">
+			<p>&copy; Nolusaurio</p>
+		</div>
+	</footer>
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+</body>
+</html>

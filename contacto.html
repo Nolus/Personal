@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> - Contacto - Sonido de Pipocas</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos2.css">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/sp.ico">
+
+
+	<script language="JavaScript">
+		var txt=document.title;
+		var espera=200;
+		var refresco=null;
+		function rotulo_title() {
+			document.title=txt;
+			txt=txt.substring(1,txt.length)+txt.charAt(0);
+			refresco=setTimeout("rotulo_title()",espera);
+		}
+		rotulo_title();
+
+	   function isEmpty(){
+           var verificar = true;
+           if(!document.formulario_contacto.name.value){
+               alert("El campo Nombre es requerido");
+               document.formulario_contacto.name.focus();
+               verificar = false;
+           } else if (!document.formulario_contacto.email.value) {
+                alert("El campo Email es requerido");
+                document.formulario_contacto.email.focus();
+                verificar = false;
+           } else if (!document.formulario_contacto.message.value) {
+                alert("El campo Mensaje es requerido");
+                document.formulario_contacto.message.focus();
+                verificar = false;
+           } 
+       }
+        
+        window.onload=funcion(){
+            document.getElementById("btn_send").onclick = isEmpty();
+        }
+	</script>
+
+</head>
+
+<body>
+	
+	<header>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+						<span class="sr-only">Desplegar / Ocultar</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand"> Sonido de Pipocas </a>
+				</div>
+
+				<!-- Inicia Menu -->
+				<div class="collapse navbar-collapse" id="navegacion-fm">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="acercademi.html">Acerca de mi</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+								Tutoriales <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Redes</a></li>
+								<li><a href="#">Linux</a></li>
+								<li><a href="#">Windows</a></li>
+								<li><a href="#">Hacking</a></li>
+								<li><a href="#">Programacion</a></li>
+							</ul>
+						</li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="enlaces.html">Enlaces</a></li>
+						<li class="active"><a href="contacto.html">Contacto</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- jumbotron -->
+	<section class="jumbotron">
+		<div class="container">
+			<h1>Sonido de Pipocas</h1>
+			<p>
+				Quieres estar en contacto conmigo? Deja tus datos y veamos como te puedo ayudar <i class="em em---1"></i>
+			</p>
+		</div>		
+	</section>
+
+	<div class="container-fluid contacto">								
+						<p class="post-contenido">
+							<div align="center">								
+								<form id="formulario_contacto" method="post" action="proc.php">
+							    	<table border="0">
+							    		<tr>
+							    			<td>Tu nombre</td>
+							    			<td>
+							    				<input type="text" id="name" name="name" size="30"/>
+							    			</td>
+											<td rowspan="3">
+												<img src="img/sp.png" alt=""/>
+											</td>
+							    		</tr>
+							    		<tr>
+							    			<td>Tu correo</td>
+							    			<td><input type="text" id="email" name="email" size="30"/></td>
+							    		</tr>
+										<tr><br>
+											<td>Tu mensaje</td>
+											<td><textarea id="message" name="message" placeholder="Contáctate conmigo!" cols="27" rows="4"></textarea></td>
+										</tr>
+							    	</table>
+							    	
+							    		<input type="submit" value="Enviar" name="B1" id="btn_send">
+										<input id="cancelar" type="reset" value="Limpiar"/>
+							    	
+							    </form>	
+							</div>		
+						</p>
+	</div>
+
+	<footer>
+		<div class="container-fluid pie">
+			<p>&copy; Nolusaurio</p>
+		</div>
+	</footer>
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+
+
+</body>
+</html>

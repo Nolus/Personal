@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Mystery+Quest);
+
+/* header */
+.navbar {
+	margin-bottom: 0;
+}
+
+.jumbotron {
+	background: #1684a7;
+	color:white;
+	font-family: "Mystery Quest", cursive;
+	margin-bottom: 0px;
+}
+
+
+.margin {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.post {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #123432;
+}
+
+.post .post-title a{
+	color: #111222;
+}
+
+.post .thumb {
+	margin-right: 10px;
+	width: 40%;
+}
+
+.post .thumb img {
+	width: 100%;
+}
+
+.post .contenedor-botones {
+	width: 100%;
+}
+
+/* -- Media Query -- */
+@media screen and (max-width: 768px){
+	.post .thumb {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: ;
+	}
+}
+
+.pie {
+	
+	text-align: center;
+	color: #1684a7;
+	padding: 0;
+	margin: auto;	
+}
+
+h3 {
+	margin: 0;
+}
+
+.posts .yo {
+	margin: 6px;
+	line-height: 20pt;
+}
+
+.post .acerca-de-mi {
+	margin-top: 10pt;
+}
+
+.blog-parrafo {
+	line-height: 20pt;	
+}
+
+.post .blog-foto {
+	margin-left: 10pt;
+	/*border: black 3px solid;*/
+}
+
+textarea {
+	resize: none;
+}
+
+form {
+	margin: 0 auto;
+}
+
+.contacto {
+	background: #f6ec72;
+	padding: 0;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 5px 15px;
+}
