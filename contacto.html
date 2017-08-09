@@ -11,38 +11,39 @@
 	<link rel="shortcut icon" href="img/sp.ico">
 
 
-	<script language="JavaScript">
+	<script type="text/javascript">
 		var txt=document.title;
 		var espera=200;
 		var refresco=null;
+
 		function rotulo_title() {
 			document.title=txt;
 			txt=txt.substring(1,txt.length)+txt.charAt(0);
 			refresco=setTimeout("rotulo_title()",espera);
 		}
-		rotulo_title();
+		
+	
+		function isEmpty(){
 
-	   function isEmpty(){
-           var verificar = true;
-           if(!document.formulario_contacto.name.value){
-               alert("El campo Nombre es requerido");
-               document.formulario_contacto.name.focus();
-               verificar = false;
-           } else if (!document.formulario_contacto.email.value) {
-                alert("El campo Email es requerido");
-                document.formulario_contacto.email.focus();
-                verificar = false;
-           } else if (!document.formulario_contacto.message.value) {
-                alert("El campo Mensaje es requerido");
-                document.formulario_contacto.message.focus();
-                verificar = false;
-           } 
-       }
+            var verificar = true;
+	        if(!document.val_post.name_txt.value){
+	        	alert("El campo Nombre es requerido");
+	            document.val_post.name_txt.focus();
+	            verificar = false;
+	        } else if (!document.val_post.email_txt.value) {
+	            alert("El campo Email es requerido");
+	            document.val_post.email_txt.focus();
+	            verificar = false;
+	        } else if (!document.val_post.message_txt.value) {
+	            alert("El campo Mensaje es requerido");
+	            document.val_post.message_txt.focus();
+	            verificar = false;
+	         } 
+	    }
         
-        window.onload=funcion(){
-        	//cargando la pagina para enviar el dato
-            document.getElementById("btn_send").onclick = isEmpty();
-        }
+        rotulo_title();
+        //document.getElementById("btn_send").onclick = isEmpty;
+
 	</script>
 
 </head>
@@ -102,12 +103,12 @@
 	<div class="container-fluid contacto">								
 						<p class="post-contenido">
 							<div align="center">								
-								<form id="formulario_contacto" method="post" action="proc.php">
+								<form id="formulario_contacto" name="val_post" method="post" action="#">
 							    	<table border="0">
 							    		<tr>
 							    			<td>Tu nombre</td>
 							    			<td>
-							    				<input type="text" id="name" name="name" size="30"/>
+							    				<input type="text" id="name" name="name_txt" size="30"/>
 							    			</td>
 											<td rowspan="3">
 												<img src="img/sp.png" alt=""/>
@@ -115,15 +116,15 @@
 							    		</tr>
 							    		<tr>
 							    			<td>Tu correo</td>
-							    			<td><input type="text" id="email" name="email" size="30"/></td>
+							    			<td><input type="text" id="email" name="email_txt" size="30"/></td>
 							    		</tr>
 										<tr><br>
 											<td>Tu mensaje</td>
-											<td><textarea id="message" name="message" placeholder="Contáctate conmigo!" cols="27" rows="4"></textarea></td>
+											<td><textarea id="message" name="message_txt" placeholder="Contáctate conmigo!" cols="27" rows="4"></textarea></td>
 										</tr>
 							    	</table>
 							    	
-							    		<input type="submit" value="Enviar" name="B1" id="btn_send">
+							    		<input type="submit" value="Enviar" name="B1" id="btn_send" onclick="isEmpty();">
 										<input id="cancelar" type="reset" value="Limpiar"/>
 							    	
 							    </form>	
