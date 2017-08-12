@@ -101,7 +101,7 @@
                         <pre>Inicio en C: <a href="http://www.aprendeaprogramar.com/course/view.php?id=3" target="_blank">Aprende a Programar en C</a></pre>
                         <pre>Inicio en Python: <a href="http://www.mclibre.org/consultar/python/">McLibre</a>, Videotutoriales de <a href="https://www.youtube.com/playlist?list=PLU8oAlHdN5BlvPxziopYZRd55pdqFwkeS" target="_blank">Pildoras Informáticas</a> y <a href="https://www.youtube.com/playlist?list=PLEtcGQaT56cj70Vl_C1qfUinyMELunL-N" target="_blank">Jesus Conde</a> </pre>
                         <pre>Inicio en JavaScript: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">Mozilla Development</a>, Videotutoriales de <a href="https://www.youtube.com/playlist?list=PLU8oAlHdN5BmpobVmj1IlneKlVLJ84TID" target="_blank">Pildoras Informaticas</a> </pre>
-                        <pre>Inicio en PHP: <a href="http://www.tutorialesprogramacionya.com/phpya/" target="_blank">PhpYa</a>, Videotutoriales de <a href="https://www.youtube.com/playlist?list=PLF2E7FC0407FF3398" target="_blank">Jesus Conde </a>y <a href="https://www.youtube.com/playlist?list=PLU8oAlHdN5BkinrODGXToK9oPAlnJxmW_" target="_blank">Pildoras Informaticas</a> </pre><br><br>
+                        <pre>Inicio en PHP: <a href="http://www.tutorialesprogramacionya.com/phpya/" target="_blank">PhpYa</a>, Videotutoriales de <a href="https://www.youtube.com/playlist?list=PLF2E7FC0407FF3398" target="_blank">Jesus Conde </a>y <a href="https://www.youtube.com/playlist?list=PLU8oAlHdN5BkinrODGXToK9oPAlnJxmW_" target="_blank">Pildoras Informaticas</a> </pre><br>
                     
                     <strong>Redes</strong><br><br>
                     Es necesario conocer como esta conformada una red informatica para entender el funcionamiento de los protocolos actualmente utilizados, te recomiendo que visites el siguiente link:<br><br>
@@ -112,10 +112,35 @@
 					</p>
 
 					<div class="contenedor-botones">
-						<a href="#" class="btn btn-success"> Sugerencias <span class="badge">20</span></a>
+						<a href="#" class="btn btn-success"> Hay <span class="badge">20</span> sugerencias</a>
 					</div>
 				</article>				
 			</section>		
+		</div>
+
+		<div class="row">
+			<section class="sugerencias col-md-12">
+				<h3>Deja tu sugerencia</h3><br/>
+				<form method="post" action="insertComent.php" id="form-sugerencias">
+					<div class="form-group">
+	  				<label for="nombre">Nombre o apodo:</label>
+	 				<input type="text" class="form-control" id="nombre">
+					</div>
+			    	
+			    	<div class="form-group">
+	  				<label for="email">Correo electronico:</label>
+	 				<input type="text" class="form-control" id="email">
+					</div>
+
+					<div class="form-group">
+	  				<label for="sugerencia">Sugerencia:</label>
+	 				<textarea class="form-control" id="sugerencia" rows="3"></textarea>
+					</div>					
+
+ 					<button type="submit" class="btn btn-primary">Enviar</button>
+					<button class="btn btn-danger" type="reset">Reset</button>	
+				</form>				
+			</section>
 		</div>
 	</section>
 
