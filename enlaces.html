@@ -121,24 +121,26 @@
 		<div class="row">
 			<section class="sugerencias col-md-12">
 				<h3>Deja tu sugerencia</h3><br/>
-				<form method="post" action="insertComent.php" id="form-sugerencias">
+				<form method="post" action="insertComent.php" id="form-sugerencias" role="form">
 					<div class="form-group">
 	  				<label for="nombre">Nombre o apodo:</label>
-	 				<input type="text" class="form-control" id="nombre">
+	 				<input type="text" class="form-control" id="nombre" name="nombre"/>
 					</div>
 			    	
 			    	<div class="form-group">
 	  				<label for="email">Correo electronico:</label>
-	 				<input type="text" class="form-control" id="email">
+	 				<input type="text" class="form-control" id="email" name="email"/>
 					</div>
 
 					<div class="form-group">
 	  				<label for="sugerencia">Sugerencia:</label>
-	 				<textarea class="form-control" id="sugerencia" rows="3"></textarea>
-					</div>					
+	 				<textarea class="form-control" id="sugerencia" name="sugerencia" rows="3"></textarea>
+					</div>	
 
- 					<button type="submit" class="btn btn-primary">Enviar</button>
+					<div class="form-group">
+ 					<button type="submit" class="btn btn-primary" name="submit">Enviar</button>
 					<button class="btn btn-danger" type="reset">Reset</button>	
+					</div>
 				</form>				
 			</section>
 		</div>
